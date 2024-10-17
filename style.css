@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.sidebarcontainer {
+    height: 100vh;
+    width: 25%;
+    background-color: rgb(85, 127, 234);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.dash, .table {
+    border: 1px solid blue;
+    background-color: rgb(4, 210, 210);
+    width: 70%;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+.dash:hover, .table:hover {
+    background-color: aqua;
+}
+
+.heading {
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 2.5rem;
+    color: rgba(206, 166, 19, 0.95);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between; 
+    align-items: center;  
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.search {
+    flex: 1; 
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+#getWeatherBtn {
+    padding: 15px;
+    background-color: burlywood;
+    border-radius: 10px;
+    color: rgb(236, 131, 11);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+}
+
+.weather-data {
+    padding-top: 5%;
+    border: 1px solid black;
+    height: 400px;
+    width: 60%;
+    text-align: center;
+    background-color: rgb(14, 203, 228);
+}
+
+.weathercontainer {
+    padding-left: 20%;
+}
+
+.tablecontainer {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    padding-left: 160px;
+    gap: 20px;
+}
+
+.verticalbarchart, .doughnutchart, .linechart {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+}
+
+.output {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0%;
+    font-weight: 800;
+    gap: 10px;
+    padding: 40px;
+}
+
+.humidity {
+    display: flex;
+    justify-content: start;
+}
+
+
+@media (max-width: 1024px) {
+    .sidebarcontainer {
+        width: 30%;
+    }
+
+    .right {
+        padding-left: 10px; 
+    }
+
+    .header-container {
+        /* flex-direction: column; 
+        align-items: flex-start;  */
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    .search {
+        margin-right: 0;
+        width: 100%; 
+    }
+
+    .weather-data {
+        width: 100%;
+        height: auto;
+    }
+    .weathercontainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .tablecontainer {
+        flex-direction: column; 
+        padding-left: 0; 
+        align-items: center; 
+    }
+
+    .verticalbarchart, .doughnutchart, .linechart {
+        width: 90%; 
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebarcontainer {
+        width: 100%;
+        height: auto;
+    }
+
+    .dash, .table {
+        font-size: 1.5rem; 
+        width: 100%; 
+    }
+
+    .heading {
+        font-size: 2rem; 
+    }
+
+    .right {
+        width: 100%;
+         
+    }
+     
+    .weather-data {
+        height: auto; 
+        width: 90%; 
+    }
+
+    .tablecontainer {
+        flex-direction: column; 
+    }
+
+    .verticalbarchart, .doughnutchart, .linechart {
+        width: 100%; 
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .search {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #getWeatherBtn {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .user-profile {
+        margin-top: 10px; 
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebarcontainer">
+            <h2 class="heading">Weather App</h2>
+            <div class="dash">
+               <a href="#a">DashBoard</a>
+            </div>
+            <div class="table">
+                <a href="./practice.html">Table</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header-container">
+                <input type="text" placeholder="search bar" class="search">
+                <button id="getWeatherBtn">Get Weather</button>
+                <div class="user-profile">
+                    <img src="ahsan.jpg" alt="User Profile" class="profile-img">
+                </div>
+            </div>
+            <div class="weathercontainer">
+                <div class="weather-data">
+                    <img src="rain.png" class="weatherimg" height="100px"> 
+                    <h2 class="temp">22°C</h2> 
+                    <h2 class="city">Islamabad</h2> 
+                    <div class="detail">
+                        <div class="humiditydiv">
+                            <img src="humidity.png" class="humidity" height="50px">
+                            <p class="texthumidity">10%</p>
+                            <p>Humidity</p>
+                        </div>
+                        <div class="winddiv">
+                            <img src="wind.png" class="wind" height="50px">
+                            <p class="textwind">10%</p> 
+                            <p>Wind</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+           
+
+            <div class="tablecontainer">
+                <div class="verticalbarchart">
+                    <canvas id="verticalbarcanvas">DoughnutChart</canvas>
+                </div>
+                <div class="doughnutchart">
+                    <canvas id="doughnutchartcanvas">DoughnutChart</canvas>
+                </div>
+                
+                <div class="linechart">
+                    <canvas id="lineChartCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.JS"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PRACTICE.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebarcontainer">
+            <h2 class="heading">Weather App</h2>
+            <div class="dash">
+               <a href="./index.html">DashBoard</a>
+            </div>
+            <div class="table">
+                <a href="./practice.html">Table</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header-container">
+                <input type="text" placeholder="search bar" class="search" width="80px">
+                <button id="getWeatherBtn">Get Weather</button>
+                <div class="user-profile">
+                    <img src="ahsan.jpg" alt="User Profile" class="profile-img">
+                </div>
+            </div>
+
+
+            <div class="weathercontainer">
+                <div class="weather-data">
+                    <!-- <h2 class="city">City Name</h2> 
+                    <h2 class="temp">Temperature</h2>  -->
+                
+                    
+                    <table class="forecast-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temp (°C)</th>
+                                <th>Humidity (%)</th>
+                                <th>Wind (m/s)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+                
+                   
+                    <div class="pagination">
+                        <button id="prev" disabled>Previous</button>
+                        <span class="page-info">Page 1</span>
+                        <button id="next">Next</button>
+                    </div>
+                </div>
+                
+                <div class="chatbotcontainer">
+                     <div class="inputcontainer">
+                        <input type="text" placeholder="search bar for chatbot" class="chatbotinput">
+                        <button class="getresponse">
+                         Get Response
+                        </button>
+                     </div>
+                    
+
+                    <div class="answercontainer">
+
+                    </div>
+                </div>
+            </div>
+           
+
+    </div>
+    
+    <script src="Practice.js"></script>
+</body>
+</html>
