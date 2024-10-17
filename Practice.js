@@ -78,7 +78,7 @@ document.getElementById('prev').addEventListener('click', () => {
 });
 
 document.getElementById('getWeatherBtn').addEventListener('click', function () {
-    const city = document.querySelector('.search').value; 
+    const city = document.querySelector('.search').value;
     if (city) {
         getWeatherForecast(city);  
     } else {
