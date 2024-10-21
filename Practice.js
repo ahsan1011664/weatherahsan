@@ -1,9 +1,9 @@
-const apiKey = '182cc742be5059f3cdc602c51cccd3ec'; 
+const apiKey = '182cc742be5059f3cdc602c51cccd3ec';
 let currentPage = 1;
 let rowsPerPage = 10;
 let forecastData = [];
 
-const geminiApiKey = 'AIzaSyBxYA866iFTotVpyazzdP6Cx4HEJm9zC8M'; 
+const geminiApiKey = 'AIzaSyBxYA866iFTotVpyazzdP6Cx4HEJm9zC8M';
 
 async function getWeatherForecast(city) {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
@@ -84,6 +84,29 @@ document.getElementById('getWeatherBtn').addEventListener('click', function () {
     } else {
         alert('Please enter a city name');
     }
+});
+
+// Sorting and Filtering Functions
+
+document.getElementById('sortAsc').addEventListener('click', () => {
+    forecastData.sort((a, b) => a.main.temp - b.main.temp);
+    displayWeatherForecast();
+});
+
+document.getElementById('sortDesc').addEventListener('click', () => {
+    forecastData.sort((a, b) => b.main.temp - a.main.temp);
+    displayWeatherForecast();
+});
+
+document.getElementById('filterRain').addEventListener('click', () => {
+    forecastData = forecastData.filter(entry => entry.weather.some(condition => condition.main.toLowerCase().includes('rain')));
+    displayWeatherForecast();
+});
+
+document.getElementById('highestTemp').addEventListener('click', () => {
+    const highestTemp = forecastData.reduce((max, entry) => (entry.main.temp > max.main.temp ? entry : max), forecastData[0]);
+    forecastData = [highestTemp];
+    displayWeatherForecast();
 });
 
 async function getGeminiAnswer(question) {
